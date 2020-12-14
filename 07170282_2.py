@@ -1,0 +1,19 @@
+i=int(input("請輸入這個月利潤"))
+boun1=100000*0.1
+boun2=boun1+100000*0.075
+boun3=boun2+200000*0.05
+boun4=boun3+200000*0.03
+boun5=boun4+400000*0.015
+if(i<=100000):
+    boun=i*0.1
+elif(i<=200000):
+    boun=boun1+(i-100000)*0.075
+elif(i<=400000):
+    boun=boun2+(i-200000)*0.05
+elif(i<=600000):
+    boun=boun3+(i-400000)*0.03
+elif(i<=1000000):
+    boun=boun4+(i-600000)*0.015
+else:
+    boun=boun5+(i-1000000)*0.01
+print("當月利潤為{}元，這個月獎金為{}元".format(i,int(boun)))
